@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- EDIT: "Project Title — Xin Xu" -->
+  <title>Project Title — Xin Xu</title>
+  <meta name="description" content="One-sentence description of this project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!--
+  HOW TO USE THIS TEMPLATE
+  ────────────────────────
+  1. Copy this file → projects/your-project-slug.html
+  2. Find every EDIT: comment and replace the placeholder text
+  3. Drop figures into ../assets/images/ and update each <img src="...">
+  4. Add a card for this project in projects/index.html and index.html
+-->
+
+<!-- ── Navigation ──────────────────────────────────────── -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="../index.html" class="nav__logo">Xin Xu</a>
+    <ul class="nav__links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#news">News</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="index.html" class="active">Projects</a></li>
+      <li><a href="../index.html#education">Education</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../assets/cv.pdf" class="nav__cta" target="_blank">CV ↗</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<nav class="nav__mobile">
+  <a href="../index.html#about">About</a>
+  <a href="../index.html#news">News</a>
+  <a href="../publications.html">Publications</a>
+  <a href="index.html">Projects</a>
+  <a href="../index.html#education">Education</a>
+  <a href="../index.html#skills">Skills</a>
+  <a href="../assets/cv.pdf" target="_blank">Curriculum Vitae ↗</a>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════════
+     PROJECT HERO
+     ══════════════════════════════════════════════════════ -->
+<header class="project-hero">
+  <div class="container">
+
+    <a href="index.html" class="project-hero__back">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      All Projects
+    </a>
+
+    <!-- EDIT: Topic tags — use .badge only (no colour variants needed) -->
+    <div class="project-hero__tags">
+      <span class="badge">Python</span>
+      <span class="badge">PyTorch</span>
+      <span class="badge">Research</span>
+    </div>
+
+    <!-- EDIT: Full project title -->
+    <h1 class="project-hero__title">Project Full Title Goes Here</h1>
+
+    <!-- EDIT: 1–2 sentence overview shown prominently in the hero -->
+    <p class="project-hero__desc">
+      A concise description of what this project does and what makes it distinctive. Keep this to one or two sentences — the detailed explanation belongs in the Overview section below.
+    </p>
+
+    <!-- EDIT: Action links — add, remove, or reorder as appropriate -->
+    <div class="project-hero__links">
+      <a href="#" class="btn btn--primary" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+        Read Paper
+      </a>
+      <a href="#" class="btn btn--outline" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        View Code
+      </a>
+      <!-- Optional extras:
+      <a href="#" class="btn btn--outline" target="_blank">Live Demo ↗</a>
+      <a href="#" class="btn btn--outline" target="_blank">Slides ↗</a>
+      -->
+    </div>
+
+    <!-- EDIT: Metadata strip -->
+    <div class="project-hero__meta">
+      <div class="meta-item">
+        <span class="meta-item__label">Status</span>
+        <!-- EDIT: Active Research / Published / Open Source / Archived -->
+        <span class="meta-item__value">Active Research</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-item__label">Year</span>
+        <span class="meta-item__value">2024 – Present</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-item__label">Venue</span>
+        <!-- EDIT: Conference / Journal / In submission -->
+        <span class="meta-item__value">Conference / Journal</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-item__label">Role</span>
+        <!-- EDIT: Lead Researcher / First Author / Co-Author / Solo Developer -->
+        <span class="meta-item__value">Lead Researcher</span>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- ══════════════════════════════════════════════════════
+     MAIN CONTENT
+     ══════════════════════════════════════════════════════ -->
+<main>
+
+  <!-- ── 1. Overview ───────────────────────────────────── -->
+  <div class="project-section">
+    <div class="container">
+      <h2>Overview</h2>
+
+      <!-- EDIT: 2–4 paragraphs. Problem → Approach → Outcome. -->
+      <p style="margin-bottom: 18px;">
+        <strong style="color: var(--ink); font-weight: 600;">Problem.</strong>
+        Describe the real-world problem or research gap this project addresses. Who is affected and why does it matter? Give enough context that a reader outside your sub-field can follow along.
+      </p>
+      <p style="margin-bottom: 18px;">
+        <strong style="color: var(--ink); font-weight: 600;">Approach.</strong>
+        Summarize how you tackled the problem — core method, key design decisions, and what differentiates your approach from prior work.
+      </p>
+      <p>
+        <strong style="color: var(--ink); font-weight: 600;">Outcome.</strong>
+        What did you build or discover? Quantify the impact where possible — e.g. "18% energy savings", "94% accuracy", "2× faster than the baseline".
+      </p>
+
+      <!-- EDIT: Hero / teaser figure. Replace src and alt. -->
+      <div class="project-fig">
+        <img src="../assets/images/proj-YOURSLUG-overview.png" alt="System overview diagram">
+        <div class="project-fig__caption">
+          Figure 1. <!-- EDIT: Write a descriptive caption. -->
+          System architecture overview showing the main pipeline components.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 2. Methods ────────────────────────────────────── -->
+  <div class="project-section">
+    <div class="container">
+      <h2>Methods</h2>
+
+      <p style="margin-bottom: 24px;">
+        <!-- EDIT: Framing sentence for the methods section. -->
+        Explain your technical approach at a level appropriate for a graduate student in your field. Cover data, model architecture, training, and evaluation.
+      </p>
+
+      <div class="cols-2" style="margin-bottom: 28px;">
+        <div>
+          <h3 style="font-size: 0.95rem; margin-bottom: 12px;">Data &amp; Preprocessing</h3>
+          <p style="font-size: 0.9rem; line-height: 1.75;">
+            <!-- EDIT -->
+            Describe your dataset: source, scale, key features, and any cleaning or augmentation steps. Note data collection challenges and how you resolved them.
+          </p>
+        </div>
+        <div>
+          <h3 style="font-size: 0.95rem; margin-bottom: 12px;">Model Architecture</h3>
+          <p style="font-size: 0.9rem; line-height: 1.75;">
+            <!-- EDIT -->
+            Describe the model: layer structure, attention mechanisms, loss functions, any novel components. Link to the paper for full mathematical details.
+          </p>
+        </div>
+      </div>
+
+      <!-- EDIT: Method diagram -->
+      <div class="project-fig">
+        <img src="../assets/images/proj-YOURSLUG-method.png" alt="Method diagram">
+        <div class="project-fig__caption">
+          Figure 2. <!-- EDIT --> Detailed model architecture.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 3. Key Findings ───────────────────────────────── -->
+  <div class="project-section">
+    <div class="container">
+      <h2>Key Findings</h2>
+
+      <!-- EDIT: Brief framing sentence -->
+      <p style="color: var(--ink-2); margin-bottom: 20px;">
+        Evaluation across [X datasets / Y buildings / Z subjects] demonstrates the following results.
+      </p>
+
+      <!-- EDIT: One row per result. Aim for 3–6. -->
+      <div class="finding-list">
+
+        <div class="finding-item">
+          <span class="finding-item__num">01</span>
+          <p class="finding-item__text">
+            <strong>Primary metric.</strong>
+            Our method achieves <strong>XX%</strong> on [benchmark], outperforming the prior state of the art by <strong>X.X points</strong>.
+          </p>
+        </div>
+
+        <div class="finding-item">
+          <span class="finding-item__num">02</span>
+          <p class="finding-item__text">
+            <strong>Efficiency.</strong>
+            Inference runs at <strong>Xms per sample</strong> on a single GPU, enabling real-time deployment.
+          </p>
+        </div>
+
+        <div class="finding-item">
+          <span class="finding-item__num">03</span>
+          <p class="finding-item__text">
+            <strong>Generalization.</strong>
+            Zero-shot transfer to [new domain / climate / building type] retains <strong>XX%</strong> of in-distribution performance.
+          </p>
+        </div>
+
+        <div class="finding-item">
+          <span class="finding-item__num">04</span>
+          <p class="finding-item__text">
+            <strong>User study.</strong>
+            In a study with <strong>N practitioners</strong>, [your tool] reduced [task time / error rate] by <strong>XX%</strong> compared to the baseline workflow.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- EDIT: Results figures — remove one column if you only have one figure -->
+      <div class="figs-grid">
+        <div class="project-fig" style="margin: 0;">
+          <img src="../assets/images/proj-YOURSLUG-result1.png" alt="Results figure 1">
+          <div class="project-fig__caption">Figure 3. <!-- EDIT --></div>
+        </div>
+        <div class="project-fig" style="margin: 0;">
+          <img src="../assets/images/proj-YOURSLUG-result2.png" alt="Results figure 2">
+          <div class="project-fig__caption">Figure 4. <!-- EDIT --></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 4. Technical Stack ────────────────────────────── -->
+  <div class="project-section">
+    <div class="container">
+      <h2>Technical Stack</h2>
+      <p style="color: var(--ink-2); margin-bottom: 16px; font-size: 0.9rem;">
+        Core libraries, frameworks, and infrastructure used in this project.
+      </p>
+      <!-- EDIT: Replace with your actual stack -->
+      <div class="tech-grid">
+        <span class="tag">Python 3.11</span>
+        <span class="tag">PyTorch 2.x</span>
+        <span class="tag">Hugging Face Transformers</span>
+        <span class="tag">NumPy / Pandas</span>
+        <span class="tag">scikit-learn</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Docker</span>
+        <span class="tag">GitHub Actions</span>
+        <span class="tag">AWS EC2</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 5. Impact & Future Work ───────────────────────── -->
+  <div class="project-section">
+    <div class="container">
+      <h2>Impact &amp; Future Work</h2>
+
+      <div class="cols-2">
+        <div>
+          <h3 style="font-size: 0.95rem; margin-bottom: 14px;">Impact</h3>
+          <!-- EDIT -->
+          <p style="font-size: 0.9rem; line-height: 1.8;">
+            This work has been adopted by [partners / practitioners / X users]. The open-source release has [N GitHub stars / downloads]. Our findings have directly influenced [related work / industry practice / policy].
+          </p>
+        </div>
+        <div>
+          <h3 style="font-size: 0.95rem; margin-bottom: 14px;">Future Directions</h3>
+          <!-- EDIT -->
+          <p style="font-size: 0.9rem; line-height: 1.8;">
+            Ongoing work focuses on [direction 1] and [direction 2]. We are collaborating with [partners] to [goal]. A follow-up paper is under submission to [venue].
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 6. Citation ───────────────────────────────────── -->
+  <div class="project-section">
+    <div class="container">
+      <h2>Citation</h2>
+      <p style="color: var(--ink-2); margin-bottom: 16px; font-size: 0.9rem;">
+        If you use this work in your research, please cite:
+      </p>
+      <!-- EDIT: BibTeX entry -->
+      <div class="citation-block">@inproceedings{xu2024projectname,
+  title     = {Your Full Paper Title},
+  author    = {Xu, Xin and Co-Author, First and Senior, Author},
+  booktitle = {Proceedings of Conference Name},
+  year      = {2024},
+  doi       = {10.xxxx/xxxxx}
+}</div>
+    </div>
+  </div>
+
+</main>
+
+
+<!-- ── Footer ──────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <div class="footer__brand">Xin Xu</div>
+      <div class="footer__copy">© 2025 Xin Xu</div>
+    </div>
+    <div class="footer__social">
+      <a href="https://github.com/lesliexxy" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+      </a>
+      <a href="mailto:xuxinyueleslie@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
