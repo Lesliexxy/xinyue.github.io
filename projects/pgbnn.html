@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics-Guided Bayesian Neural Networks — Xinyue Xu</title>
+  <meta name="description" content="PG-BNNs embed first-principles thermal dynamics into Bayesian neural network priors for calibrated uncertainty quantification in building energy prediction.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────────── -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="../index.html" class="nav__logo">Xinyue Xu</a>
+    <ul class="nav__links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#news">News</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="index.html" class="active">Projects</a></li>
+      <li><a href="../index.html#education">Education</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../assets/cv.pdf" class="nav__cta" target="_blank">CV ↗</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<nav class="nav__mobile">
+  <a href="../index.html#about">About</a>
+  <a href="../index.html#news">News</a>
+  <a href="../publications.html">Publications</a>
+  <a href="index.html">Projects</a>
+  <a href="../index.html#education">Education</a>
+  <a href="../index.html#skills">Skills</a>
+  <a href="../assets/cv.pdf" target="_blank">Curriculum Vitae ↗</a>
+</nav>
+
+<!-- ── Project Hero ─────────────────────────────────────── -->
+<header class="project-hero">
+  <div class="container">
+    <a href="index.html" class="project-hero__back">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      All Projects
+    </a>
+
+    <div class="project-hero__tags">
+      <span class="badge badge--journal">Journal Article</span>
+      <span class="badge">Forecasting 2025</span>
+      <span class="badge">Bayesian / UQ</span>
+      <span class="badge">Physics-Informed ML</span>
+    </div>
+
+    <h1 class="project-hero__title">
+      Physics-Guided Bayesian Neural Networks for Uncertainty Quantification in Dynamic Systems
+    </h1>
+
+    <p class="project-hero__desc">
+      We embed first-principles thermal dynamics constraints directly into Bayesian neural network priors, enabling calibrated uncertainty estimates that remain physically plausible even when data is scarce — a critical property for trustworthy building energy control and diagnostics.
+    </p>
+
+    <div class="project-hero__links">
+      <a href="https://doi.org/10.3390/forecast7010009" class="btn btn--primary" target="_blank" rel="noopener">Read Paper ↗</a>
+      <a href="#citation" class="btn btn--outline">BibTeX</a>
+    </div>
+
+    <!-- Meta strip -->
+    <div class="project-hero__meta">
+      <div class="meta-item">
+        <span class="meta-item__label">Published</span>
+        <span class="meta-item__value">January 2025</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-item__label">Venue</span>
+        <span class="meta-item__value">Forecasting, 7(1), 9</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-item__label">DOI</span>
+        <span class="meta-item__value">10.3390/forecast7010009</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-item__label">Authors</span>
+        <span class="meta-item__value">Xinyue Xu, Julian Wang</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── Overview ─────────────────────────────────────────── -->
+<section class="project-section section">
+  <div class="container">
+    <span class="section-label">Overview</span>
+    <h2>Motivation &amp; Problem</h2>
+    <p style="line-height:1.85; margin-bottom:18px;">
+      Machine learning-based building energy models can achieve high predictive accuracy, but their uncertainty estimates are often poorly calibrated — they either overestimate confidence (making them unsafe for control) or underestimate it (making them useless for diagnostics). Standard Bayesian neural networks address this in principle, but their priors are agnostic to physical laws, allowing the model to learn thermodynamically implausible distributions, especially under sparse or irregular sensor data.
+    </p>
+    <p style="line-height:1.85;">
+      PG-BNNs solve this by encoding physics directly into the prior. We derive informative prior distributions over network weights from the thermal dynamics of buildings — energy balance equations, RC circuit analogies, heat transfer laws — so that the posterior always respects known physical constraints, even in extrapolation regimes far from the training data.
+    </p>
+
+    <!-- Cover figure: drop an image here -->
+    <div class="project-fig" style="margin-top:36px;">
+      <!-- <img src="../assets/images/pgbnn-architecture.png" alt="PG-BNN architecture showing physics prior construction"> -->
+      <div style="height:280px; display:flex; align-items:center; justify-content:center; background:var(--bg-subtle); color:var(--ink-3); font-size:0.85rem;">
+        [ Add figure: assets/images/pgbnn-architecture.png ]
+      </div>
+      <div class="project-fig__caption">Fig. 1 — PG-BNN architecture: physics priors (left) are propagated through the Bayesian network to produce calibrated posterior predictive intervals (right).</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Methods ───────────────────────────────────────────── -->
+<section class="project-section section">
+  <div class="container">
+    <span class="section-label">Methodology</span>
+    <h2>Approach</h2>
+    <p style="line-height:1.85; margin-bottom:24px;">
+      The PG-BNN framework has three components:
+    </p>
+
+    <div class="finding-list">
+      <div class="finding-item">
+        <span class="finding-item__num">01</span>
+        <div class="finding-item__text">
+          <strong>Physics-Informed Prior Construction.</strong> We derive the mean and variance of each weight's prior distribution from the linearised thermal dynamics model of the building zone, parameterised by thermal resistance (<em>R</em>) and capacitance (<em>C</em>) values estimated from building geometry and material properties.
+        </div>
+      </div>
+      <div class="finding-item">
+        <span class="finding-item__num">02</span>
+        <div class="finding-item__text">
+          <strong>Variational Inference.</strong> Posterior inference is performed via mean-field variational inference (MFVI), making the method scalable to real-world building sensor datasets without requiring MCMC sampling.
+        </div>
+      </div>
+      <div class="finding-item">
+        <span class="finding-item__num">03</span>
+        <div class="finding-item__text">
+          <strong>Calibration Evaluation.</strong> We assess calibration via Expected Calibration Error (ECE), Reliability Diagrams, and continuous ranked probability score (CRPS), benchmarking against standard BNNs, MC Dropout, Deep Ensembles, and Gaussian Process baselines.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Key Findings ──────────────────────────────────────── -->
+<section class="project-section section">
+  <div class="container">
+    <span class="section-label">Results</span>
+    <h2>Key Findings</h2>
+
+    <div class="finding-list">
+      <div class="finding-item">
+        <span class="finding-item__num">①</span>
+        <div class="finding-item__text">
+          <strong>15–27% improvement in predictive accuracy</strong> over purely data-driven BNN baselines across five real-world commercial building datasets, with the largest gains observed in data-scarce settings (fewer than 2 weeks of training data).
+        </div>
+      </div>
+      <div class="finding-item">
+        <span class="finding-item__num">②</span>
+        <div class="finding-item__text">
+          <strong>Significantly better-calibrated uncertainty intervals.</strong> PG-BNNs achieve ECE scores 40–60% lower than standard BNNs and MC Dropout, meaning the stated confidence intervals are much closer to empirical coverage frequencies.
+        </div>
+      </div>
+      <div class="finding-item">
+        <span class="finding-item__num">③</span>
+        <div class="finding-item__text">
+          <strong>Physical plausibility under distribution shift.</strong> When evaluated on out-of-distribution weather conditions (heat waves, cold snaps), PG-BNN predictions remain thermodynamically consistent while standard BNNs produce physically impossible values.
+        </div>
+      </div>
+      <div class="finding-item">
+        <span class="finding-item__num">④</span>
+        <div class="finding-item__text">
+          <strong>Scalable inference.</strong> MFVI-based training converges in comparable wall-clock time to standard BNN training, making PG-BNNs practical for deployment on building management systems with limited compute.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Technical Stack ───────────────────────────────────── -->
+<section class="project-section section">
+  <div class="container">
+    <span class="section-label">Implementation</span>
+    <h2>Technical Stack</h2>
+    <div class="tech-grid">
+      <span class="tag">Python 3.10</span>
+      <span class="tag">PyTorch 2.0</span>
+      <span class="tag">PyMC 5</span>
+      <span class="tag">Pyro</span>
+      <span class="tag">NumPy / SciPy</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">Matplotlib / Seaborn</span>
+      <span class="tag">EnergyPlus</span>
+      <span class="tag">scikit-learn</span>
+      <span class="tag">Jupyter</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── Impact ─────────────────────────────────────────────── -->
+<section class="project-section section">
+  <div class="container">
+    <span class="section-label">Impact &amp; Future Work</span>
+    <h2>Broader Impact</h2>
+    <p style="line-height:1.85; margin-bottom:18px;">
+      Calibrated uncertainty is a prerequisite for deploying ML-based building controls safely — a model that knows what it doesn't know can hand off to rule-based fallbacks rather than making dangerous predictions. PG-BNNs provide a practical path to that goal without sacrificing the flexibility of neural networks.
+    </p>
+    <p style="line-height:1.85;">
+      Future directions include extending the physics prior to multi-zone buildings with coupled thermal dynamics, integrating PG-BNNs into model predictive control loops with formal safety guarantees, and applying the framework to other physics-rich domains such as structural health monitoring and HVAC fault detection.
+    </p>
+  </div>
+</section>
+
+<!-- ── Citation ──────────────────────────────────────────── -->
+<section class="project-section section" id="citation">
+  <div class="container">
+    <span class="section-label">Cite This Work</span>
+    <h2>BibTeX</h2>
+    <div class="citation-block">@article{xu2025pgbnn,
+  title   = {Physics-Guided {Bayesian} Neural Networks for Uncertainty
+             Quantification in Dynamic Systems},
+  author  = {Xu, Xinyue and Wang, Julian},
+  journal = {Forecasting},
+  volume  = {7},
+  number  = {1},
+  pages   = {9},
+  year    = {2025},
+  doi     = {10.3390/forecast7010009},
+  publisher = {MDPI}
+}</div>
+  </div>
+</section>
+
+<!-- ── Footer ──────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <div class="footer__brand">Xinyue (Leslie) Xu</div>
+      <div class="footer__copy">© 2025 Xinyue Xu</div>
+    </div>
+    <div class="footer__social">
+      <a href="https://github.com/lesliexxy" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+      </a>
+      <a href="mailto:xkx5055@psu.edu" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

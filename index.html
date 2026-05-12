@@ -101,9 +101,11 @@
       </div>
     </div>
 
-    <div class="hero__avatar" aria-hidden="true">
-      <div class="placeholder-icon">&#128100;</div>
-      <!-- <img src="assets/images/profile.jpg" alt="Xinyue (Leslie) Xu"> -->
+    <div class="hero__avatar" aria-hidden="false">
+      <!-- Drop profile.jpg into assets/images/ and it will appear here -->
+      <img src="assets/images/profile.jpg" alt="Xinyue (Leslie) Xu"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="placeholder-icon" style="display:none;">&#128100;</div>
     </div>
   </div>
 </section>
