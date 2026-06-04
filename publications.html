@@ -17,7 +17,7 @@
     <a href="index.html" class="nav__logo">Xinyue Xu</a>
     <ul class="nav__links">
       <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#news">News</a></li>
+      <li><a href="news.html">News</a></li>
       <li><a href="publications.html" class="active">Publications</a></li>
       <li><a href="projects/index.html">Projects</a></li>
       <li><a href="index.html#education">Education</a></li>
@@ -31,7 +31,7 @@
 </nav>
 <nav class="nav__mobile">
   <a href="index.html#about">About</a>
-  <a href="index.html#news">News</a>
+  <a href="news.html">News</a>
   <a href="publications.html">Publications</a>
   <a href="projects/index.html">Projects</a>
   <a href="index.html#education">Education</a>
@@ -75,17 +75,15 @@
       <div class="pub-year-label">Under Review</div>
       <div class="pub-list" style="margin-top: 0;">
 
-        <article class="pub-item" data-tags="preprint ml energy bayesian">
+        <article class="pub-item" data-tags="preprint ml energy">
           <div class="pub-item__badge">
             <span class="badge badge--preprint">Under Review</span>
           </div>
           <h3 class="pub-item__title">
-            <a href="#" target="_blank" rel="noopener">
-              [M1 — Manuscript under review]
-            </a>
+            Unequal and remediable building conditions underpin residential energy efficiency disparities across U.S. climates
           </h3>
           <p class="pub-item__authors">
-            <span class="me">Xinyue Xu</span>, Julian Wang
+            <span class="me">Xinyue Xu</span>, Chenshun Chen, Guangqing Chi, Julian Wang
           </p>
           <p class="pub-item__venue">Manuscript under review, 2025.</p>
           <div class="pub-item__abstract">[Abstract available upon request.]</div>
@@ -94,19 +92,44 @@
           </div>
         </article>
 
-        <article class="pub-item" data-tags="preprint ml energy">
+      </div>
+    </div>
+
+    <!-- ══ Accepted ═══════════════════════════════════════ -->
+    <div class="pub-year-group">
+      <div class="pub-year-label">Accepted</div>
+      <div class="pub-list" style="margin-top: 0;">
+
+        <article class="pub-item" data-tags="conference ml energy">
           <div class="pub-item__badge">
-            <span class="badge badge--preprint">Under Review</span>
+            <span class="badge badge--conference">Conference</span>
+            <span class="badge badge--preprint">Accepted</span>
           </div>
           <h3 class="pub-item__title">
-            <a href="#" target="_blank" rel="noopener">
-              [M2 — Manuscript under review]
-            </a>
+            ResStock-LLM: A multi-agent framework for climate-adaptive residential retrofit decision support
           </h3>
           <p class="pub-item__authors">
-            <span class="me">Xinyue Xu</span>, Julian Wang
+            <span class="me">Xinyue Xu</span>, Julian Wang, Xudong Liu
           </p>
-          <p class="pub-item__venue">Manuscript under review, 2025.</p>
+          <p class="pub-item__venue">Accepted for publication.</p>
+          <div class="pub-item__abstract">[Abstract available upon request.]</div>
+          <div class="pub-item__links">
+            <button class="pub-item__toggle">Show abstract</button>
+          </div>
+        </article>
+
+        <article class="pub-item" data-tags="conference ml">
+          <div class="pub-item__badge">
+            <span class="badge badge--conference">Conference</span>
+            <span class="badge badge--preprint">Accepted</span>
+          </div>
+          <h3 class="pub-item__title">
+            Bridging construction and AI: Computer vision-based floor plan analysis for real-time cost estimation
+          </h3>
+          <p class="pub-item__authors">
+            Linjie Sun, <span class="me">Xinyue Xu</span>, Julian Wang
+          </p>
+          <p class="pub-item__venue">Accepted for publication.</p>
           <div class="pub-item__abstract">[Abstract available upon request.]</div>
           <div class="pub-item__links">
             <button class="pub-item__toggle">Show abstract</button>
@@ -128,18 +151,18 @@
           </div>
           <h3 class="pub-item__title">
             <a href="https://doi.org/10.1016/j.ins.2025.122743" target="_blank" rel="noopener">
-              Information-Theoretic and Bayesian Model Selection for Building Energy Models
+              Information-theoretic and Bayesian model selection for physics-based modeling: Balancing fit, complexity, and generalization
             </a>
           </h3>
           <p class="pub-item__authors">
             <span class="me">Xinyue Xu</span>, Julian Wang
           </p>
           <p class="pub-item__venue">
-            <em>Information Sciences</em>, vol. 726, 122743, 2026.
+            <em>Information Sciences</em>, 726, 122743, 2026.
             DOI: <a href="https://doi.org/10.1016/j.ins.2025.122743" target="_blank" rel="noopener">10.1016/j.ins.2025.122743</a>
           </p>
           <div class="pub-item__abstract">
-            We propose an information-theoretic and Bayesian framework for principled selection among competing surrogate model architectures for building energy simulation. The method combines mutual information criteria — including AIC, BIC, and DIC variants adapted for stochastic surrogate models — with full Bayesian model evidence computed via thermodynamic integration. Applied across 20 real-world commercial and residential building datasets, the framework consistently identifies parsimonious models that generalize better than those selected by cross-validation alone, and provides interpretable posterior model probabilities that communicate modeling uncertainty to practitioners making calibration decisions.
+            Reliable model selection is a cornerstone of developing physics-based models of engineering systems. However, existing model selection criteria has not been investigated across a variety of calibration scenarios, where selection choices can be affected by (i) parameter dimensionality, (ii) model form, (iii) prior informativeness, (iv) reparameterization, and (v) data characteristics. Moreover, it remains unclear whether these criteria can reliably distinguish model fidelity that genuinely improves explanatory power. These limitations restrict the broader applicability of model selection criteria in physics-based modeling, where balancing goodness-of-fit, complexity, and generalization is critical. To address these gaps, this study systematically evaluates information-theoretic and Bayesian model selection criteria through two case studies. The first case study employs polynomial regression models to isolate the effects of calibration factors and investigate their influence on the selection behavior of criteria. The second case study extends the analysis to a hierarchy of thermal models for double-pane windows, examining the ability of selection criteria to differentiate effective complexity from superficial increases in model fidelity. Results indicate that classical information-theoretic criteria are sensitive to parameter dimensionality, while covariance-based criteria reflect changes in model form and data characteristics, and Bayesian criteria exhibit sensitivity to all examined calibration factors. Furthermore, both covariance-based and Bayesian criteria effectively identify secondary physical mechanisms as sources of ineffective complexity, penalizing redundant fidelity. These findings underscore that model selection is not a one-size-fits-all task, and the choice of model selection criteria should be informed by the calibration scenario and the modeling objective.
           </div>
           <div class="pub-item__links">
             <a href="https://doi.org/10.1016/j.ins.2025.122743" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
@@ -155,6 +178,32 @@
       <div class="pub-year-label">2025</div>
       <div class="pub-list" style="margin-top: 0;">
 
+        <article class="pub-item" data-tags="journal ml energy bayesian">
+          <div class="pub-item__badge">
+            <span class="badge badge--journal">Systematic Review</span>
+            <span class="badge badge--featured">Featured</span>
+          </div>
+          <h3 class="pub-item__title">
+            <a href="https://doi.org/10.1016/j.rser.2025.115817" target="_blank" rel="noopener">
+              Systematic review on uncertainty quantification in machine learning-based building energy modeling
+            </a>
+          </h3>
+          <p class="pub-item__authors">
+            <span class="me">Xinyue Xu</span>, Yuqing Hu, Sez Atamturktur, Li Chen, Julian Wang
+          </p>
+          <p class="pub-item__venue">
+            <em>Renewable and Sustainable Energy Reviews</em>, 218, 115817, 2025.
+            DOI: <a href="https://doi.org/10.1016/j.rser.2025.115817" target="_blank" rel="noopener">10.1016/j.rser.2025.115817</a>
+          </p>
+          <div class="pub-item__abstract">
+            Uncertainty quantification (UQ) has received increasing attention for improving the reliability, transparency, and robustness of machine learning (ML)-based building energy modeling (BEM). As ML methods are widely integrated into BEM applications, there is a growing need for a structured and comprehensive understanding of UQ implementations in ML-based BEM. This paper addresses this gap by presenting a thorough review of literatures at the intersection of ML, BEM, and UQ, guided by a systematic literature search using a Keyword Synonym Search strategy. First, three primary sources of uncertainty are identified in ML-based BEM, which are building system operations, building simulation tools, and ML models. The contributing factors of these sources are further categorized into aleatoric and epistemic uncertainty. The review then examines ten state-of-the-art UQ techniques, respectively ensemble modeling, prior network, Bayesian neural networks, Markov Chain Monte Carlo, variational inference, dropout networks, Bayes by Backprop, Bayesian active learning, variational autoencoders, and Gaussian process. Each UQ technique is reviewed in terms of its modeling principles and applications within ML-based BEM. The discussion offers critical insights into the necessity, practical implementation, comparative performance, and research gaps of UQ in ML-based BEM. Five research challenges are discussed, such as the underrepresentation of aleatoric uncertainty in building datasets and limited adoptions of advanced UQ techniques within ML-based BEM. Finally, this review concludes with recommendations for future research to support the development of uncertainty-aware ML-based BEMs.
+          </div>
+          <div class="pub-item__links">
+            <a href="https://doi.org/10.1016/j.rser.2025.115817" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
+            <button class="pub-item__toggle">Show abstract</button>
+          </div>
+        </article>
+
         <article class="pub-item" data-tags="journal ml bayesian energy">
           <div class="pub-item__badge">
             <span class="badge badge--journal">Journal</span>
@@ -162,7 +211,7 @@
           </div>
           <h3 class="pub-item__title">
             <a href="https://doi.org/10.3390/forecast7010009" target="_blank" rel="noopener">
-              Physics-Guided Bayesian Neural Networks for Uncertainty Quantification in Dynamic Systems
+              Comparative analysis of physics-guided Bayesian neural networks for uncertainty quantification in dynamic systems
             </a>
           </h3>
           <p class="pub-item__authors">
@@ -173,96 +222,10 @@
             DOI: <a href="https://doi.org/10.3390/forecast7010009" target="_blank" rel="noopener">10.3390/forecast7010009</a>
           </p>
           <div class="pub-item__abstract">
-            We introduce Physics-Guided Bayesian Neural Networks (PG-BNNs), which embed first-principles constraints — including thermal dynamics equations and energy conservation laws — directly into the prior distributions of Bayesian neural networks through physics-informed regularization and structured prior construction. Evaluated on building thermal response prediction tasks, PG-BNNs produce significantly better-calibrated uncertainty estimates than standard BNNs, maintain physical plausibility under distribution shift, and improve predictive accuracy in data-scarce regimes by 15–27% over purely data-driven baselines. The approach enables reliable confidence bounds for model predictive control and fault diagnostics in building energy systems.
+            Uncertainty quantification (UQ) is critical for modeling complex dynamic systems, ensuring robustness and interpretability. This study extends Physics-Guided Bayesian Neural Networks (PG-BNNs) to enhance model robustness by integrating physical laws into Bayesian frameworks. Unlike Artificial Neural Networks (ANNs), which provide deterministic predictions, and Bayesian Neural Networks (BNNs), which handle uncertainty probabilistically but struggle with generalization under sparse and noisy data, PG-BNNs incorporate the laws of physics, such as governing equations and boundary conditions, to enforce physical consistency. This physics-guided approach improves generalization across different noise levels while reducing data dependency. The effectiveness of PG-BNNs is validated through a one-degree-of-freedom vibration system with multiple noise levels, serving as a representative case study to compare the performance of Monte Carlo (MC) dropout ANNs, BNNs, and PG-BNNs across interpolation and extrapolation domains. Model accuracy is assessed using Mean Squared Error (MSE), Mean Absolute Percentage Error (MAE), and Coefficient of Variation of Root Mean Square Error (CVRMSE), while UQ is evaluated through 95% Credible Intervals (CIs), Mean Prediction Interval Width (MPIW), the Quality of Confidence Intervals (QCI), and Coverage Width-based Criterion (CWC). Results demonstrate that PG-BNNs can achieve high accuracy and good adherence to physical laws simultaneously, compared to MC dropout ANNs and BNNs, which confirms the potential of PG-BNNs in engineering applications related to dynamic systems.
           </div>
           <div class="pub-item__links">
             <a href="https://doi.org/10.3390/forecast7010009" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
-            <button class="pub-item__toggle">Show abstract</button>
-          </div>
-        </article>
-
-        <article class="pub-item" data-tags="journal ml energy bayesian">
-          <div class="pub-item__badge">
-            <span class="badge badge--journal">Systematic Review</span>
-            <span class="badge badge--featured">Featured</span>
-          </div>
-          <h3 class="pub-item__title">
-            <a href="https://doi.org/10.1016/j.rser.2025.115817" target="_blank" rel="noopener">
-              Uncertainty Quantification in Machine Learning-Based Building Energy Models: A Systematic Review
-            </a>
-          </h3>
-          <p class="pub-item__authors">
-            <span class="me">Xinyue Xu</span>, Julian Wang
-          </p>
-          <p class="pub-item__venue">
-            <em>Renewable and Sustainable Energy Reviews</em>, vol. 218, 115817, 2025.
-            DOI: <a href="https://doi.org/10.1016/j.rser.2025.115817" target="_blank" rel="noopener">10.1016/j.rser.2025.115817</a>
-          </p>
-          <div class="pub-item__abstract">
-            A comprehensive systematic review of 150+ papers (2015–2024) on uncertainty quantification (UQ) methods applied to machine learning-based building energy models. We survey Bayesian approaches (BNNs, GPs, variational inference), frequentist ensembles, conformal prediction, Monte Carlo dropout, and hybrid physics-data methods. The review establishes a taxonomy of uncertainty sources (aleatory vs. epistemic, input uncertainty, model structural uncertainty, and parameter uncertainty), synthesizes evaluation standards across studies, and identifies critical gaps: lack of calibration reporting, insufficient treatment of distribution shift, and rare application to control-oriented models. We propose a standardized UQ evaluation framework and identify high-priority research directions including integration with digital twins and equitable deployment under data scarcity.
-          </div>
-          <div class="pub-item__links">
-            <a href="https://doi.org/10.1016/j.rser.2025.115817" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
-            <button class="pub-item__toggle">Show abstract</button>
-          </div>
-        </article>
-
-        <article class="pub-item" data-tags="journal ml energy">
-          <div class="pub-item__badge">
-            <span class="badge badge--journal">Journal</span>
-          </div>
-          <h3 class="pub-item__title">
-            <a href="#" target="_blank" rel="noopener">
-              [J4 — Journal Article]
-            </a>
-          </h3>
-          <p class="pub-item__authors">
-            <span class="me">Xinyue Xu</span>, Julian Wang
-          </p>
-          <p class="pub-item__venue"><em>[Journal Name]</em>, 2025.</p>
-          <div class="pub-item__abstract">[Abstract placeholder]</div>
-          <div class="pub-item__links">
-            <a href="#" class="btn btn--ghost btn--sm">Paper ↗</a>
-            <button class="pub-item__toggle">Show abstract</button>
-          </div>
-        </article>
-
-        <article class="pub-item" data-tags="conference ml energy">
-          <div class="pub-item__badge">
-            <span class="badge badge--conference">Conference</span>
-          </div>
-          <h3 class="pub-item__title">
-            <a href="#" target="_blank" rel="noopener">
-              [C8 — Conference Paper]
-            </a>
-          </h3>
-          <p class="pub-item__authors">
-            <span class="me">Xinyue Xu</span>, Julian Wang
-          </p>
-          <p class="pub-item__venue"><em>[Conference Name]</em>, 2025.</p>
-          <div class="pub-item__abstract">[Abstract placeholder]</div>
-          <div class="pub-item__links">
-            <a href="#" class="btn btn--ghost btn--sm">PDF ↗</a>
-            <button class="pub-item__toggle">Show abstract</button>
-          </div>
-        </article>
-
-        <article class="pub-item" data-tags="conference ml energy">
-          <div class="pub-item__badge">
-            <span class="badge badge--conference">Conference</span>
-          </div>
-          <h3 class="pub-item__title">
-            <a href="#" target="_blank" rel="noopener">
-              [C9 — Conference Paper]
-            </a>
-          </h3>
-          <p class="pub-item__authors">
-            <span class="me">Xinyue Xu</span>, Julian Wang
-          </p>
-          <p class="pub-item__venue"><em>[Conference Name]</em>, 2025.</p>
-          <div class="pub-item__abstract">[Abstract placeholder]</div>
-          <div class="pub-item__links">
-            <a href="#" class="btn btn--ghost btn--sm">PDF ↗</a>
             <button class="pub-item__toggle">Show abstract</button>
           </div>
         </article>
@@ -275,22 +238,25 @@
       <div class="pub-year-label">2024</div>
       <div class="pub-list" style="margin-top: 0;">
 
-        <article class="pub-item" data-tags="journal ml energy bayesian">
+        <article class="pub-item" data-tags="journal ml energy">
           <div class="pub-item__badge">
             <span class="badge badge--journal">Journal</span>
           </div>
           <h3 class="pub-item__title">
-            <a href="#" target="_blank" rel="noopener">
-              [J5 — Journal Article]
+            <a href="https://doi.org/10.1016/j.jobe.2024.111219" target="_blank" rel="noopener">
+              Assessing building thermal resilience in response to heatwaves through integrating a social vulnerability lens
             </a>
           </h3>
           <p class="pub-item__authors">
-            <span class="me">Xinyue Xu</span>, Julian Wang
+            S. Paneru, <span class="me">Xinyue Xu</span>, Julian Wang, G. Chi, Y. Hu
           </p>
-          <p class="pub-item__venue"><em>[Journal Name]</em>, 2024.</p>
-          <div class="pub-item__abstract">[Abstract placeholder]</div>
+          <p class="pub-item__venue">
+            <em>Journal of Building Engineering</em>, 2024.
+            DOI: <a href="https://doi.org/10.1016/j.jobe.2024.111219" target="_blank" rel="noopener">10.1016/j.jobe.2024.111219</a>
+          </p>
+          <div class="pub-item__abstract">[Abstract available upon request.]</div>
           <div class="pub-item__links">
-            <a href="#" class="btn btn--ghost btn--sm">Paper ↗</a>
+            <a href="https://doi.org/10.1016/j.jobe.2024.111219" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
             <button class="pub-item__toggle">Show abstract</button>
           </div>
         </article>
@@ -300,57 +266,66 @@
             <span class="badge badge--journal">Journal</span>
           </div>
           <h3 class="pub-item__title">
-            <a href="#" target="_blank" rel="noopener">
-              [J6 — Journal Article]
+            <a href="https://doi.org/10.1016/j.enbuild.2024.114926" target="_blank" rel="noopener">
+              Dual impacts of solar-reflective facades in high-density urban areas on building energy use and outdoor thermal environments
             </a>
           </h3>
           <p class="pub-item__authors">
-            <span class="me">Xinyue Xu</span>, Julian Wang
+            C. Chen, Julian Wang, H. Zhang, <span class="me">Xinyue Xu</span>, E. Hinkle, X. Chao, Q. Shi
           </p>
-          <p class="pub-item__venue"><em>[Journal Name]</em>, 2024.</p>
-          <div class="pub-item__abstract">[Abstract placeholder]</div>
+          <p class="pub-item__venue">
+            <em>Energy and Buildings</em>, 2024.
+            DOI: <a href="https://doi.org/10.1016/j.enbuild.2024.114926" target="_blank" rel="noopener">10.1016/j.enbuild.2024.114926</a>
+          </p>
+          <div class="pub-item__abstract">[Abstract available upon request.]</div>
           <div class="pub-item__links">
-            <a href="#" class="btn btn--ghost btn--sm">Paper ↗</a>
+            <a href="https://doi.org/10.1016/j.enbuild.2024.114926" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
             <button class="pub-item__toggle">Show abstract</button>
           </div>
         </article>
 
-        <article class="pub-item" data-tags="conference ml energy">
+        <article class="pub-item" data-tags="conference ml bayesian">
           <div class="pub-item__badge">
             <span class="badge badge--conference">Conference</span>
           </div>
           <h3 class="pub-item__title">
-            <a href="#" target="_blank" rel="noopener">
-              [C6 — Conference Paper]
+            <a href="https://doi.org/10.1007/978-3-031-68893-5_11" target="_blank" rel="noopener">
+              Analyzing the influential factors on ICaF performance in Bayesian model calibration and forecasting
             </a>
           </h3>
           <p class="pub-item__authors">
-            <span class="me">Xinyue Xu</span>, Julian Wang
+            <span class="me">Xinyue Xu</span>, Y. Wang, R. Platz, S. Atamturktur
           </p>
-          <p class="pub-item__venue"><em>[Conference Name]</em>, 2024.</p>
-          <div class="pub-item__abstract">[Abstract placeholder]</div>
+          <p class="pub-item__venue">
+            <em>IMAC, A Conference and Exposition on Structural Dynamics</em>, 2024.
+            DOI: <a href="https://doi.org/10.1007/978-3-031-68893-5_11" target="_blank" rel="noopener">10.1007/978-3-031-68893-5_11</a>
+          </p>
+          <div class="pub-item__abstract">[Abstract available upon request.]</div>
           <div class="pub-item__links">
-            <a href="#" class="btn btn--ghost btn--sm">PDF ↗</a>
+            <a href="https://doi.org/10.1007/978-3-031-68893-5_11" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
             <button class="pub-item__toggle">Show abstract</button>
           </div>
         </article>
 
-        <article class="pub-item" data-tags="conference ml energy">
+        <article class="pub-item" data-tags="conference ml bayesian">
           <div class="pub-item__badge">
             <span class="badge badge--conference">Conference</span>
           </div>
           <h3 class="pub-item__title">
-            <a href="#" target="_blank" rel="noopener">
-              [C7 — Conference Paper]
+            <a href="https://doi.org/10.1115/VVUQ2024-122961" target="_blank" rel="noopener">
+              Physics-guided Bayesian neural networks and their applications in ODE problems
             </a>
           </h3>
           <p class="pub-item__authors">
-            <span class="me">Xinyue Xu</span>, Julian Wang
+            <span class="me">Xinyue Xu</span>, S. Paneru, S. Atamturktur, Julian Wang
           </p>
-          <p class="pub-item__venue"><em>[Conference Name]</em>, 2024.</p>
-          <div class="pub-item__abstract">[Abstract placeholder]</div>
+          <p class="pub-item__venue">
+            <em>ASME Verification, Validation, and Uncertainty Quantification Symposium</em>, 2024.
+            DOI: <a href="https://doi.org/10.1115/VVUQ2024-122961" target="_blank" rel="noopener">10.1115/VVUQ2024-122961</a>
+          </p>
+          <div class="pub-item__abstract">[Abstract available upon request.]</div>
           <div class="pub-item__links">
-            <a href="#" class="btn btn--ghost btn--sm">PDF ↗</a>
+            <a href="https://doi.org/10.1115/VVUQ2024-122961" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
             <button class="pub-item__toggle">Show abstract</button>
           </div>
         </article>
@@ -363,38 +338,94 @@
       <div class="pub-year-label">2023</div>
       <div class="pub-list" style="margin-top: 0;">
 
-        <article class="pub-item" data-tags="conference ml energy">
+        <article class="pub-item" data-tags="journal ml bayesian">
           <div class="pub-item__badge">
-            <span class="badge badge--conference">Conference</span>
+            <span class="badge badge--journal">Journal</span>
           </div>
           <h3 class="pub-item__title">
-            <a href="#" target="_blank" rel="noopener">[C4 — Conference Paper]</a>
+            <a href="https://doi.org/10.1115/1.4050075" target="_blank" rel="noopener">
+              Simultaneous Bayesian calibration and engineering design with an application to a vibration isolation system
+            </a>
           </h3>
           <p class="pub-item__authors">
-            <span class="me">Xinyue Xu</span>, Julian Wang
+            C. Ehrett, A. Brown, C. Kitchens, <span class="me">Xinyue Xu</span>, R. Platz, S. Atamturktur
           </p>
-          <p class="pub-item__venue"><em>[Conference Name]</em>, 2023.</p>
-          <div class="pub-item__abstract">[Abstract placeholder]</div>
+          <p class="pub-item__venue">
+            <em>ASME Journal of Verification, Validation and Uncertainty Quantification</em>, 2023.
+            DOI: <a href="https://doi.org/10.1115/1.4050075" target="_blank" rel="noopener">10.1115/1.4050075</a>
+          </p>
+          <div class="pub-item__abstract">[Abstract available upon request.]</div>
           <div class="pub-item__links">
-            <a href="#" class="btn btn--ghost btn--sm">PDF ↗</a>
+            <a href="https://doi.org/10.1115/1.4050075" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
             <button class="pub-item__toggle">Show abstract</button>
           </div>
         </article>
 
-        <article class="pub-item" data-tags="conference ml energy">
+        <article class="pub-item" data-tags="conference ml bayesian">
           <div class="pub-item__badge">
             <span class="badge badge--conference">Conference</span>
           </div>
           <h3 class="pub-item__title">
-            <a href="#" target="_blank" rel="noopener">[C5 — Conference Paper]</a>
+            <a href="https://doi.org/10.1007/978-3-031-37003-8_2" target="_blank" rel="noopener">
+              An uncertainty-aware measure of model calibration flexibility
+            </a>
           </h3>
           <p class="pub-item__authors">
-            <span class="me">Xinyue Xu</span>, Julian Wang
+            <span class="me">Xinyue Xu</span>, Y. Yu, R. Platz, S. Atamturktur
           </p>
-          <p class="pub-item__venue"><em>[Conference Name]</em>, 2023.</p>
-          <div class="pub-item__abstract">[Abstract placeholder]</div>
+          <p class="pub-item__venue">
+            <em>Society for Experimental Mechanics Annual Conference and Exposition</em>, 2023.
+            DOI: <a href="https://doi.org/10.1007/978-3-031-37003-8_2" target="_blank" rel="noopener">10.1007/978-3-031-37003-8_2</a>
+          </p>
+          <div class="pub-item__abstract">[Abstract available upon request.]</div>
           <div class="pub-item__links">
-            <a href="#" class="btn btn--ghost btn--sm">PDF ↗</a>
+            <a href="https://doi.org/10.1007/978-3-031-37003-8_2" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
+            <button class="pub-item__toggle">Show abstract</button>
+          </div>
+        </article>
+
+        <article class="pub-item" data-tags="conference ml bayesian">
+          <div class="pub-item__badge">
+            <span class="badge badge--conference">Conference</span>
+          </div>
+          <h3 class="pub-item__title">
+            <a href="https://doi.org/10.1007/978-3-031-37003-8_1" target="_blank" rel="noopener">
+              Introducing a round-robin challenge to quantify model form uncertainty in passive and active vibration isolation
+            </a>
+          </h3>
+          <p class="pub-item__authors">
+            R. Platz, <span class="me">Xinyue Xu</span>, S. Atamturktur
+          </p>
+          <p class="pub-item__venue">
+            <em>Model Validation and Uncertainty Quantification, Volume 3. SEM</em>, 2023.
+            DOI: <a href="https://doi.org/10.1007/978-3-031-37003-8_1" target="_blank" rel="noopener">10.1007/978-3-031-37003-8_1</a>
+          </p>
+          <div class="pub-item__abstract">[Abstract available upon request.]</div>
+          <div class="pub-item__links">
+            <a href="https://doi.org/10.1007/978-3-031-37003-8_1" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
+            <button class="pub-item__toggle">Show abstract</button>
+          </div>
+        </article>
+
+        <article class="pub-item" data-tags="conference ml bayesian">
+          <div class="pub-item__badge">
+            <span class="badge badge--conference">Conference</span>
+          </div>
+          <h3 class="pub-item__title">
+            <a href="https://doi.org/10.1007/978-3-031-37003-8_18" target="_blank" rel="noopener">
+              Predicting nonlinear structural dynamic response of ODE systems using constrained Gaussian process regression
+            </a>
+          </h3>
+          <p class="pub-item__authors">
+            Y. Wang, Y. Yu, <span class="me">Xinyue Xu</span>, S. Atamturktur
+          </p>
+          <p class="pub-item__venue">
+            <em>Society for Experimental Mechanics Annual Conference and Exposition</em>, 2023.
+            DOI: <a href="https://doi.org/10.1007/978-3-031-37003-8_18" target="_blank" rel="noopener">10.1007/978-3-031-37003-8_18</a>
+          </p>
+          <div class="pub-item__abstract">[Abstract available upon request.]</div>
+          <div class="pub-item__links">
+            <a href="https://doi.org/10.1007/978-3-031-37003-8_18" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
             <button class="pub-item__toggle">Show abstract</button>
           </div>
         </article>
@@ -402,61 +433,53 @@
       </div>
     </div>
 
-    <!-- ══ 2022 & Earlier ════════════════════════════════ -->
+    <!-- ══ 2019 & Earlier ════════════════════════════════ -->
     <div class="pub-year-group">
-      <div class="pub-year-label">2022 &amp; Earlier</div>
+      <div class="pub-year-label">2019 &amp; Earlier</div>
       <div class="pub-list" style="margin-top: 0;">
 
-        <article class="pub-item" data-tags="conference ml energy">
+        <article class="pub-item" data-tags="conference energy">
           <div class="pub-item__badge">
             <span class="badge badge--conference">Conference</span>
           </div>
           <h3 class="pub-item__title">
-            <a href="#" target="_blank" rel="noopener">[C1 — Conference Paper]</a>
+            <a href="https://doi.org/10.1088/1755-1315/238/1/012040" target="_blank" rel="noopener">
+              The optimization of personalized ventilation based on a jogger's unsteady breathing cycle
+            </a>
           </h3>
           <p class="pub-item__authors">
-            <span class="me">Xinyue Xu</span>, Julian Wang
+            <span class="me">Xinyue Xu</span>, Z. Li, J. Zhao
           </p>
-          <p class="pub-item__venue"><em>[Conference Name]</em>, 2022.</p>
-          <div class="pub-item__abstract">[Abstract placeholder]</div>
+          <p class="pub-item__venue">
+            <em>IOP Conference Series: Earth and Environmental Science</em>, 2019.
+            DOI: <a href="https://doi.org/10.1088/1755-1315/238/1/012040" target="_blank" rel="noopener">10.1088/1755-1315/238/1/012040</a>
+          </p>
+          <div class="pub-item__abstract">[Abstract available upon request.]</div>
           <div class="pub-item__links">
-            <a href="#" class="btn btn--ghost btn--sm">PDF ↗</a>
+            <a href="https://doi.org/10.1088/1755-1315/238/1/012040" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
             <button class="pub-item__toggle">Show abstract</button>
           </div>
         </article>
 
-        <article class="pub-item" data-tags="conference ml energy">
+        <article class="pub-item" data-tags="conference energy">
           <div class="pub-item__badge">
             <span class="badge badge--conference">Conference</span>
           </div>
           <h3 class="pub-item__title">
-            <a href="#" target="_blank" rel="noopener">[C2 — Conference Paper]</a>
+            <a href="https://doi.org/10.1088/1755-1315/238/1/012044" target="_blank" rel="noopener">
+              CFD simulations on the cooling effect of air supply velocity for high heat flux surfaces
+            </a>
           </h3>
           <p class="pub-item__authors">
-            <span class="me">Xinyue Xu</span>, Julian Wang
+            W. Zhao, X. Zhang, <span class="me">Xinyue Xu</span>, C. Wu, W. Ye
           </p>
-          <p class="pub-item__venue"><em>[Conference Name]</em>, 2022.</p>
-          <div class="pub-item__abstract">[Abstract placeholder]</div>
-          <div class="pub-item__links">
-            <a href="#" class="btn btn--ghost btn--sm">PDF ↗</a>
-            <button class="pub-item__toggle">Show abstract</button>
-          </div>
-        </article>
-
-        <article class="pub-item" data-tags="conference ml energy">
-          <div class="pub-item__badge">
-            <span class="badge badge--conference">Conference</span>
-          </div>
-          <h3 class="pub-item__title">
-            <a href="#" target="_blank" rel="noopener">[C3 — Conference Paper]</a>
-          </h3>
-          <p class="pub-item__authors">
-            <span class="me">Xinyue Xu</span>, Julian Wang
+          <p class="pub-item__venue">
+            <em>IOP Conference Series: Earth and Environmental Science</em>, 2019.
+            DOI: <a href="https://doi.org/10.1088/1755-1315/238/1/012044" target="_blank" rel="noopener">10.1088/1755-1315/238/1/012044</a>
           </p>
-          <p class="pub-item__venue"><em>[Conference Name]</em>, 2021.</p>
-          <div class="pub-item__abstract">[Abstract placeholder]</div>
+          <div class="pub-item__abstract">[Abstract available upon request.]</div>
           <div class="pub-item__links">
-            <a href="#" class="btn btn--ghost btn--sm">PDF ↗</a>
+            <a href="https://doi.org/10.1088/1755-1315/238/1/012044" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
             <button class="pub-item__toggle">Show abstract</button>
           </div>
         </article>

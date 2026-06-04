@@ -17,7 +17,7 @@
     <a href="../index.html" class="nav__logo">Xinyue Xu</a>
     <ul class="nav__links">
       <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#news">News</a></li>
+      <li><a href="../news.html">News</a></li>
       <li><a href="../publications.html">Publications</a></li>
       <li><a href="index.html" class="active">Projects</a></li>
       <li><a href="../index.html#education">Education</a></li>
@@ -31,7 +31,7 @@
 </nav>
 <nav class="nav__mobile">
   <a href="../index.html#about">About</a>
-  <a href="../index.html#news">News</a>
+  <a href="../news.html">News</a>
   <a href="../publications.html">Publications</a>
   <a href="index.html">Projects</a>
   <a href="../index.html#education">Education</a>
@@ -61,187 +61,286 @@
     <!-- Filter bar -->
     <div class="projects-filter-bar">
       <button class="pub-filter-btn active" data-proj-filter="all">All</button>
-      <button class="pub-filter-btn" data-proj-filter="ml">ML / AI</button>
       <button class="pub-filter-btn" data-proj-filter="bayesian">Bayesian / UQ</button>
-      <button class="pub-filter-btn" data-proj-filter="energy">Energy</button>
-      <button class="pub-filter-btn" data-proj-filter="retrofit">Retrofit</button>
+      <button class="pub-filter-btn" data-proj-filter="retrofit">Retrofit &amp; Equity</button>
+      <button class="pub-filter-btn" data-proj-filter="ml">AI / Vision</button>
       <button class="pub-filter-btn" data-proj-filter="tool">Tools</button>
-      <button class="pub-filter-btn" data-proj-filter="web">Web</button>
     </div>
 
-    <!-- Horizontal project rows — image left, text right -->
-    <div class="project-list">
+    <!-- ══ Theme 1: Bayesian Inference & Uncertainty Quantification ══ -->
+    <div class="pub-year-group">
+      <div class="pub-year-label">Bayesian Inference &amp; Uncertainty Quantification</div>
+      <div class="project-list" style="margin-top: 0;">
 
-      <article class="project-row" data-tags="ml bayesian uq energy">
-        <a href="pgbnn.html" class="project-row__img" aria-label="Physics-Guided Bayesian Neural Networks">
-          <div class="project-row__img-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 3h18v18H3zM9 9h6v6H9z"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
-          </div>
-          <!-- <img src="../assets/images/proj-pgbnn.png" alt="PG-BNN architecture diagram"> -->
-        </a>
-        <div class="project-row__body">
-          <div>
-            <div class="project-row__tags">
-              <span class="badge">Python</span>
-              <span class="badge">PyTorch</span>
-              <span class="badge">PyMC</span>
-              <span class="badge badge--journal">Published · Forecasting 2025</span>
+        <!-- Model Selection — 2026 -->
+        <article class="project-row" data-tags="ml bayesian energy">
+          <a href="model-selection.html" class="project-row__img" aria-label="Bayesian Model Selection for BEM">
+            <div class="project-row__img-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
             </div>
-            <a href="pgbnn.html" class="project-row__title">Physics-Guided Bayesian Neural Networks for Uncertainty Quantification</a>
-            <p class="project-row__desc">Embeds first-principles thermal dynamics constraints directly into Bayesian neural network priors, producing calibrated uncertainty estimates for building energy prediction. Improves predictive accuracy 15–27% over purely data-driven baselines in data-scarce regimes. Published in <em>Forecasting</em>, 7(1), 9, 2025.</p>
-          </div>
-          <div class="project-row__links">
-            <a href="pgbnn.html" class="btn btn--ghost btn--sm">Details →</a>
-            <a href="https://doi.org/10.3390/forecast7010009" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-row" data-tags="ml bayesian energy">
-        <a href="model-selection.html" class="project-row__img" aria-label="Bayesian Model Selection for BEM">
-          <div class="project-row__img-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
-          </div>
-          <!-- <img src="../assets/images/proj-model-sel.png" alt="Model selection framework"> -->
-        </a>
-        <div class="project-row__body">
-          <div>
-            <div class="project-row__tags">
-              <span class="badge">Python</span>
-              <span class="badge">Bayesian</span>
-              <span class="badge">Info Theory</span>
-              <span class="badge badge--journal">Published · Info. Sciences 2026</span>
+          </a>
+          <div class="project-row__body">
+            <div>
+              <div class="project-row__tags">
+                <span class="badge">MATLAB</span>
+                <span class="badge">Bayesian</span>
+                <span class="badge">Info Theory</span>
+                <span class="badge badge--journal">Published · Info. Sciences 2026</span>
+              </div>
+              <a href="model-selection.html" class="project-row__title">Information-Theoretic &amp; Bayesian Model Selection for Physics-Based Models</a>
+              <p class="project-row__desc">Systematically evaluates how AIC, BIC, DIC, and Bayesian model evidence behave across calibration scenarios — parameter dimensionality, model form, prior informativeness, and data characteristics. Applied to polynomial regression and a hierarchy of thermal models for double-pane windows. Published in <em>Information Sciences</em>, 726, 2026.</p>
             </div>
-            <a href="model-selection.html" class="project-row__title">Information-Theoretic &amp; Bayesian Model Selection for Building Energy Models</a>
-            <p class="project-row__desc">Proposes a principled framework combining mutual information criteria and Bayesian model evidence for ranking competing surrogate model architectures. Consistently identifies parsimonious models that generalize better than cross-validation alone across 20 real-world building datasets. Published in <em>Information Sciences</em>, 726, 2026.</p>
-          </div>
-          <div class="project-row__links">
-            <a href="model-selection.html" class="btn btn--ghost btn--sm">Details →</a>
-            <a href="https://doi.org/10.1016/j.ins.2025.122743" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-row" data-tags="ml bayesian energy">
-        <a href="uq-bem.html" class="project-row__img" aria-label="UQ in Building Energy Models">
-          <div class="project-row__img-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </div>
-          <!-- <img src="../assets/images/proj-uq-bem.png" alt="UQ taxonomy figure"> -->
-        </a>
-        <div class="project-row__body">
-          <div>
-            <div class="project-row__tags">
-              <span class="badge">Python</span>
-              <span class="badge">Bayesian</span>
-              <span class="badge">EnergyPlus</span>
-              <span class="badge badge--journal">Published · RSER 2025</span>
+            <div class="project-row__links">
+              <a href="model-selection.html" class="btn btn--ghost btn--sm">Details →</a>
+              <a href="https://doi.org/10.1016/j.ins.2025.122743" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
             </div>
-            <a href="uq-bem.html" class="project-row__title">Uncertainty Quantification in ML-Based Building Energy Models — Systematic Review</a>
-            <p class="project-row__desc">Comprehensive review of 150+ UQ methods applied to ML-based building energy models. Establishes a taxonomy of uncertainty sources, synthesizes evaluation standards across studies, and proposes a standardized evaluation framework. Published in <em>Renewable and Sustainable Energy Reviews</em>, 218, 2025.</p>
           </div>
-          <div class="project-row__links">
-            <a href="uq-bem.html" class="btn btn--ghost btn--sm">Details →</a>
-            <a href="https://doi.org/10.1016/j.rser.2025.115817" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="project-row" data-tags="ml energy retrofit">
-        <a href="retrofit-agent.html" class="project-row__img" aria-label="Multi-Agent Retrofit Framework">
-          <div class="project-row__img-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <!-- <img src="../assets/images/proj-retrofit.png" alt="Multi-agent system diagram"> -->
-        </a>
-        <div class="project-row__body">
-          <div>
-            <div class="project-row__tags">
-              <span class="badge">Python</span>
-              <span class="badge">LLM</span>
-              <span class="badge">Multi-Agent</span>
-              <span class="badge">EnergyPlus</span>
+        <!-- PG-BNNs — 2025 -->
+        <article class="project-row" data-tags="ml bayesian energy">
+          <a href="pgbnn.html" class="project-row__img" aria-label="Physics-Guided Bayesian Neural Networks">
+            <div class="project-row__img-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 3h18v18H3zM9 9h6v6H9z"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
             </div>
-            <a href="retrofit-agent.html" class="project-row__title">Multi-Agent Retrofit Decision Framework</a>
-            <p class="project-row__desc">Agentic AI system that orchestrates building diagnostics, energy simulation, and equity analysis agents to generate equitable, cost-effective retrofit recommendations for residential buildings, with explicit attention to energy burden disparities across income groups.</p>
-          </div>
-          <div class="project-row__links">
-            <a href="retrofit-agent.html" class="btn btn--ghost btn--sm">Details →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-row" data-tags="ml energy retrofit">
-        <a href="retrofit-diagnostics.html" class="project-row__img" aria-label="Equitable Retrofit Diagnostics">
-          <div class="project-row__img-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
-          </div>
-          <!-- <img src="../assets/images/proj-diagnostics.png" alt="Retrofit diagnostics output"> -->
-        </a>
-        <div class="project-row__body">
-          <div>
-            <div class="project-row__tags">
-              <span class="badge">Python</span>
-              <span class="badge">scikit-learn</span>
-              <span class="badge">EnergyPlus</span>
+          </a>
+          <div class="project-row__body">
+            <div>
+              <div class="project-row__tags">
+                <span class="badge">Python</span>
+                <span class="badge">PyTorch</span>
+                <span class="badge">PyMC</span>
+                <span class="badge badge--journal">Published · Forecasting 2025</span>
+              </div>
+              <a href="pgbnn.html" class="project-row__title">Comparative Analysis of Physics-Guided Bayesian Neural Networks for Uncertainty Quantification</a>
+              <p class="project-row__desc">Embeds governing equations and boundary conditions directly into Bayesian neural network priors, enforcing physical consistency under sparse and noisy data. Benchmarks MC-dropout ANNs, standard BNNs, and PG-BNNs on a one-degree-of-freedom vibration system across interpolation and extrapolation regimes. Published in <em>Forecasting</em>, 7(1), 9, 2025.</p>
             </div>
-            <a href="retrofit-diagnostics.html" class="project-row__title">Equitable Retrofit Diagnostics</a>
-            <p class="project-row__desc">ML-based diagnostics framework for identifying cost-effective, equity-aware retrofit measures in residential buildings, with particular attention to energy burden disparities experienced by low-income households.</p>
-          </div>
-          <div class="project-row__links">
-            <a href="retrofit-diagnostics.html" class="btn btn--ghost btn--sm">Details →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-row" data-tags="ml energy">
-        <a href="floorplan-cv.html" class="project-row__img" aria-label="Computer Vision Floor Plan Analysis">
-          <div class="project-row__img-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          </div>
-          <!-- <img src="../assets/images/proj-floorplan.png" alt="Floor plan parsing output"> -->
-        </a>
-        <div class="project-row__body">
-          <div>
-            <div class="project-row__tags">
-              <span class="badge">Python</span>
-              <span class="badge">Computer Vision</span>
-              <span class="badge">Deep Learning</span>
+            <div class="project-row__links">
+              <a href="pgbnn.html" class="btn btn--ghost btn--sm">Details →</a>
+              <a href="https://doi.org/10.3390/forecast7010009" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
             </div>
-            <a href="floorplan-cv.html" class="project-row__title">Computer Vision Floor Plan Analysis</a>
-            <p class="project-row__desc">Deep learning pipeline for automated extraction of spatial features from architectural floor plan drawings, enabling programmatic building energy model geometry generation directly from 2D architectural drawings.</p>
           </div>
-          <div class="project-row__links">
-            <a href="floorplan-cv.html" class="btn btn--ghost btn--sm">Details →</a>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="project-row" data-tags="tool web">
-        <a href="leettrack.html" class="project-row__img" aria-label="LeetTrack">
-          <div class="project-row__img-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <!-- <img src="../assets/images/proj-leettrack.png" alt="LeetTrack UI screenshot"> -->
-        </a>
-        <div class="project-row__body">
-          <div>
-            <div class="project-row__tags">
-              <span class="badge">JavaScript</span>
-              <span class="badge">HTML / CSS</span>
+        <!-- UQ Systematic Review — 2025 -->
+        <article class="project-row" data-tags="ml bayesian energy">
+          <a href="uq-bem.html" class="project-row__img" aria-label="UQ in Building Energy Models">
+            <div class="project-row__img-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
             </div>
-            <a href="leettrack.html" class="project-row__title">LeetTrack — Spaced Repetition for LeetCode</a>
-            <p class="project-row__desc">SM-2 spaced repetition system for LeetCode problems. Surfaces due reviews, tracks mastery per topic, and visualizes learning curves over time — fully client-side with zero dependencies, deployable as a static page.</p>
+          </a>
+          <div class="project-row__body">
+            <div>
+              <div class="project-row__tags">
+                <span class="badge">Python</span>
+                <span class="badge">Bayesian</span>
+                <span class="badge">EnergyPlus</span>
+                <span class="badge badge--journal">Published · RSER 2025</span>
+              </div>
+              <a href="uq-bem.html" class="project-row__title">Uncertainty Quantification in ML-Based Building Energy Modeling — Systematic Review</a>
+              <p class="project-row__desc">Reviews 141 studies on UQ in ML-based building energy modeling. Identifies three primary uncertainty sources, surveys ten state-of-the-art UQ techniques (BNNs, MCMC, variational inference, GP, etc.), and proposes a taxonomy of aleatoric vs. epistemic uncertainty. Published in <em>Renewable and Sustainable Energy Reviews</em>, 218, 2025.</p>
+            </div>
+            <div class="project-row__links">
+              <a href="uq-bem.html" class="btn btn--ghost btn--sm">Details →</a>
+              <a href="https://doi.org/10.1016/j.rser.2025.115817" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Paper ↗</a>
+            </div>
           </div>
-          <div class="project-row__links">
-            <a href="leettrack.html" class="btn btn--ghost btn--sm">Details →</a>
-            <a href="https://github.com/lesliexxy" class="btn btn--ghost btn--sm">Code ↗</a>
-            <a href="https://lesliexxy.github.io" class="btn btn--ghost btn--sm">Live ↗</a>
-          </div>
-        </div>
-      </article>
+        </article>
 
+      </div>
     </div>
+
+    <!-- ══ Theme 2: Causal Discovery & Scientific ML ════════ -->
+    <div class="pub-year-group">
+      <div class="pub-year-label">Causal Discovery &amp; Scientific Machine Learning</div>
+      <div class="project-list" style="margin-top: 0;">
+
+        <!-- Causal Discovery — 2026 -->
+        <article class="project-row" data-tags="ml bayesian">
+          <div class="project-row__img" style="cursor:default;">
+            <div class="project-row__img-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 11.5l10-5M7 12.5l10 5"/></svg>
+            </div>
+          </div>
+          <div class="project-row__body">
+            <div>
+              <div class="project-row__tags">
+                <span class="badge">Python</span>
+                <span class="badge">Causal Inference</span>
+                <span class="badge">LLM</span>
+                <span class="badge badge--preprint">In Progress · Feb 2026</span>
+              </div>
+              <span class="project-row__title">Causal Discovery and Causal Inference in Building Energy Research</span>
+              <p class="project-row__desc">Systematic review of causal discovery and causal inference methods for building energy systems. Covers data-driven causal graphs, knowledge-driven paradigms, hybrid approaches, and LLM-assisted causal reasoning. Synthesizes methodological gaps and opportunities for moving building energy analysis from correlation-based prediction toward actionable causal decision support. Ongoing, 2026.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ══ Theme 3: Building Retrofit & Equity ══════════════ -->
+    <div class="pub-year-group">
+      <div class="pub-year-label">Building Retrofit &amp; Equity</div>
+      <div class="project-list" style="margin-top: 0;">
+
+        <!-- Multi-Factor Retrofit Diagnosis Toolkit — 2025 -->
+        <article class="project-row" data-tags="ml energy retrofit">
+          <div class="project-row__img" style="cursor:default;">
+            <div class="project-row__img-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+          </div>
+          <div class="project-row__body">
+            <div>
+              <div class="project-row__tags">
+                <span class="badge">Python</span>
+                <span class="badge">EnergyPlus</span>
+                <span class="badge">Social Vulnerability</span>
+                <span class="badge badge--preprint">In Progress · Aug 2025</span>
+              </div>
+              <span class="project-row__title">Multi-Factor Retrofit Diagnosis Toolkit for U.S. Residential Buildings</span>
+              <p class="project-row__desc">Diagnostic toolkit that assesses retrofit needs across physical, environmental, and socioeconomic dimensions. Integrates climate and weather-zone information, social vulnerability indicators, building physical features, and energy consumption profiles into a unified pipeline. Identifies high-priority retrofit targets to support transparent, equity-oriented building energy decisions. Ongoing, 2025–present.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Multi-Agent Retrofit — 2025 -->
+        <article class="project-row" data-tags="ml energy retrofit">
+          <a href="retrofit-agent.html" class="project-row__img" aria-label="Multi-Agent Retrofit Framework">
+            <div class="project-row__img-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+          </a>
+          <div class="project-row__body">
+            <div>
+              <div class="project-row__tags">
+                <span class="badge">Python</span>
+                <span class="badge">LLM</span>
+                <span class="badge">Multi-Agent</span>
+                <span class="badge">EnergyPlus</span>
+                <span class="badge badge--preprint">Accepted · C1</span>
+              </div>
+              <a href="retrofit-agent.html" class="project-row__title">Multi-Agent Framework for Climate-Adaptive Retrofit Decision Support</a>
+              <p class="project-row__desc">LLM-assisted multi-agent pipeline that converts household descriptions into structured retrofit reasoning inputs, combining housing-stock lookup, climate-specific building performance analysis, and retrofit recommendation generation. Aligns outputs with climate-zone-specific standards for non-expert users. Accepted as ResStock-LLM, 2025.</p>
+            </div>
+            <div class="project-row__links">
+              <a href="retrofit-agent.html" class="btn btn--ghost btn--sm">Details →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Equitable Retrofit Diagnostics — 2024 -->
+        <article class="project-row" data-tags="ml energy retrofit">
+          <a href="retrofit-diagnostics.html" class="project-row__img" aria-label="Equitable Retrofit Diagnostics">
+            <div class="project-row__img-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+            </div>
+          </a>
+          <div class="project-row__body">
+            <div>
+              <div class="project-row__tags">
+                <span class="badge">Python</span>
+                <span class="badge">EnergyPlus</span>
+                <span class="badge">Info Theory</span>
+                <span class="badge badge--preprint">Under Review · M1</span>
+              </div>
+              <a href="retrofit-diagnostics.html" class="project-row__title">Equitable Retrofit Diagnostics Across U.S. Climate Zones</a>
+              <p class="project-row__desc">Information-theoretic framework using Jensen-Shannon Divergence, concentration index analysis, and Oaxaca-Blinder decomposition to identify physical building deficiencies behind income-stratified energy-efficiency disparities. Translates climate-dependent diagnostics into retrofit priorities across heterogeneous U.S. housing stocks. Under review, 2024–present.</p>
+            </div>
+            <div class="project-row__links">
+              <a href="retrofit-diagnostics.html" class="btn btn--ghost btn--sm">Details →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Building Parameter Enrichment — 2024 -->
+        <article class="project-row" data-tags="ml bayesian energy retrofit">
+          <div class="project-row__img" style="cursor:default;">
+            <div class="project-row__img-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+          </div>
+          <div class="project-row__body">
+            <div>
+              <div class="project-row__tags">
+                <span class="badge">Python</span>
+                <span class="badge">scikit-learn</span>
+                <span class="badge">Bayesian</span>
+              </div>
+              <span class="project-row__title">Building Parameter Enrichment Using Gaussian Naive Bayes</span>
+              <p class="project-row__desc">Probabilistic classifier to infer missing wall-insulation features from building contextual information. Optimized via grid search and evaluated on accuracy, precision, F1, and uncertainty. Uses probabilistic entropy as a predictive confidence signal to support building-envelope vulnerability assessment. 2024.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ══ Theme 4: AI & Computer Vision ════════════════════ -->
+    <div class="pub-year-group">
+      <div class="pub-year-label">AI &amp; Computer Vision</div>
+      <div class="project-list" style="margin-top: 0;">
+
+        <!-- Floor Plan CV — 2025 -->
+        <article class="project-row" data-tags="ml">
+          <a href="floorplan-cv.html" class="project-row__img" aria-label="Computer Vision Floor Plan Analysis">
+            <div class="project-row__img-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+          </a>
+          <div class="project-row__body">
+            <div>
+              <div class="project-row__tags">
+                <span class="badge">Python</span>
+                <span class="badge">YOLO</span>
+                <span class="badge">Computer Vision</span>
+                <span class="badge badge--preprint">Accepted · C2</span>
+              </div>
+              <a href="floorplan-cv.html" class="project-row__title">Computer Vision Floor Plan Analysis for Real-Time Cost Estimation</a>
+              <p class="project-row__desc">YOLO-based pipeline that recognizes construction elements from architectural floor plans and connects recognition results to a cost database for automated quantity takeoff and early-stage cost estimation. Reduces manual estimation time and improves pricing transparency. Accepted, 2025.</p>
+            </div>
+            <div class="project-row__links">
+              <a href="floorplan-cv.html" class="btn btn--ghost btn--sm">Details →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ══ Theme 4: Open-Source Developer Tools ══════════════ -->
+    <div class="pub-year-group">
+      <div class="pub-year-label">Open-Source Tools</div>
+      <div class="project-list" style="margin-top: 0;">
+
+        <!-- LeetTrack -->
+        <article class="project-row" data-tags="tool">
+          <a href="leettrack.html" class="project-row__img" aria-label="LeetTrack">
+            <div class="project-row__img-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+          </a>
+          <div class="project-row__body">
+            <div>
+              <div class="project-row__tags">
+                <span class="badge">JavaScript</span>
+                <span class="badge">HTML / CSS</span>
+              </div>
+              <a href="leettrack.html" class="project-row__title">LeetTrack — Spaced Repetition for LeetCode</a>
+              <p class="project-row__desc">SM-2 spaced repetition system for LeetCode problems. Surfaces due reviews, tracks mastery per topic, and visualizes learning curves over time — fully client-side with zero dependencies, deployable as a static page.</p>
+            </div>
+            <div class="project-row__links">
+              <a href="leettrack.html" class="btn btn--ghost btn--sm">Details →</a>
+              <a href="https://github.com/lesliexxy" class="btn btn--ghost btn--sm">Code ↗</a>
+              <a href="https://lesliexxy.github.io" class="btn btn--ghost btn--sm">Live ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
   </div>
 </main>
 

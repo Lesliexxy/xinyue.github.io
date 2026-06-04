@@ -121,7 +121,7 @@ h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem);  font-weight: 400; }
 h3 { font-size: clamp(1.1rem, 2vw, 1.35rem);   font-weight: 600; }
 h4 { font-size: 1.05rem; font-weight: 600; }
 
-p { color: var(--ink-2); }
+p { color: var(--ink-2); text-align: justify; }
 
 code {
   font-family: var(--mono);
