@@ -320,6 +320,7 @@ code {
 .hero__profile {
   max-width: 200px;
   display: flex;
+  max-width: 200px;
   flex-direction: column;
 }
 
@@ -1450,3 +1451,189 @@ code {
   margin-top: -6px;
 }
 
+
+
+/* ── 22. Dark Home Page ─────────────────────────────────── */
+body.dark-page {
+  --bg:        #2d2d2d;
+  --bg-white:  #363636;
+  --bg-subtle: #3d3d3d;
+  --rule:      #484848;
+  --rule-hi:   #606060;
+  --ink:       #e8e8e8;
+  --ink-2:     #c0c0c0;
+  --ink-3:     #909090;
+  --accent:    #5bc8c8;
+  --accent-2:  #7ad8d8;
+  --accent-bg: rgba(91, 200, 200, 0.12);
+  --shadow-xs: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+body.dark-page .hero {
+  background-image: none;
+  border-bottom: none;
+  min-height: calc(100vh - var(--nav-h));
+}
+
+/* Circular avatar */
+body.dark-page .hero__avatar {
+  width: 180px;
+  height: 180px;
+  aspect-ratio: unset;
+  border-radius: 50%;
+  border: 3px solid var(--rule-hi);
+  margin: 0 auto 20px;
+}
+
+body.dark-page .hero__profile {
+  text-align: center;
+}
+
+body.dark-page .hero__card-info {
+  padding-top: 0;
+  text-align: left;
+}
+
+body.dark-page .hero__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+  font-family: var(--sans);
+  letter-spacing: 0;
+  text-align: center;
+}
+
+body.dark-page .hero__title {
+  font-size: 0.78rem;
+  color: var(--ink-3);
+  line-height: 1.55;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+body.dark-page .hero__affiliation { display: none; }
+body.dark-page .hero__location    { display: none; }
+body.dark-page .hero__email-link  { display: none; }
+body.dark-page .hero__social      { display: none; }
+body.dark-page .hero__rule        { display: none; }
+body.dark-page .hero__meta        { display: none; }
+
+/* Profile link list (icon + label) */
+.profile-divider {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 16px 0;
+}
+
+.profile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: var(--ink-3);
+  padding: 5px 0;
+  text-decoration: none;
+  transition: color var(--dur) var(--ease);
+}
+.profile-link:hover { color: var(--accent); }
+.profile-link svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: var(--accent);
+  opacity: 0.85;
+}
+
+/* Right content */
+.dark-hero-name {
+  font-size: clamp(1.7rem, 2.8vw, 2.3rem);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 28px;
+  font-family: var(--sans);
+  letter-spacing: -0.01em;
+}
+
+.dark-bio {
+  font-size: 0.96rem;
+  color: var(--ink-2);
+  line-height: 1.85;
+  margin-bottom: 20px;
+  max-width: 680px;
+  text-align: left;
+}
+
+.dark-bio strong { color: var(--ink); font-weight: 600; }
+
+.dark-bio a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(91,200,200,0.35);
+}
+.dark-bio a:hover {
+  color: var(--accent-2);
+  border-bottom-color: var(--accent);
+}
+
+/* Button overrides for dark page */
+body.dark-page .btn--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1a1a1a;
+}
+body.dark-page .btn--primary:hover {
+  background: var(--accent-2);
+  border-color: var(--accent-2);
+}
+body.dark-page .btn--outline {
+  border-color: var(--rule-hi);
+  color: var(--ink-3);
+}
+body.dark-page .btn--outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+
+/* Dark page responsive */
+@media (max-width: 860px) {
+  body.dark-page .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  body.dark-page .hero__profile {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 28px;
+    text-align: left;
+  }
+  body.dark-page .hero__avatar {
+    margin: 0;
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+  }
+  body.dark-page .hero__name,
+  body.dark-page .hero__title { text-align: left; }
+}
+
+@media (max-width: 520px) {
+  body.dark-page .hero__profile {
+    flex-direction: column;
+    align-items: center;
+  }
+  body.dark-page .hero__name,
+  body.dark-page .hero__title { text-align: center; }
+  body.dark-page .hero__card-info { text-align: center; }
+  .profile-links { align-items: flex-start; display: inline-flex; }
+}
