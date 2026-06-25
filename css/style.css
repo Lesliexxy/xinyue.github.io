@@ -168,11 +168,35 @@ code {
   display: block;
   font-family: var(--sans);
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--accent);
+  letter-spacing: 0.12em;
+  color: var(--ink-3);
 }
+
+/* Page-hero title (Publications, News, Projects standalone pages) */
+.page-hero-title {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 10px 0 16px;
+  color: var(--ink);
+}
+
+.page-hero-subtitle {
+  font-size: 0.95rem;
+  color: var(--ink-2);
+  max-width: 520px;
+  line-height: 1.75;
+}
+
+/* Prose block — consistent paragraph rhythm */
+.prose p {
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+.prose p:last-child { margin-bottom: 0; }
 
 /* ── 3. Layout & Grid ───────────────────────────────────── */
 .container {
@@ -424,11 +448,12 @@ code {
 }
 
 .hero__title {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--ink);
-  margin-bottom: 6px;
-  letter-spacing: 0.01em;
+  font-size: 0.78rem;
+  color: var(--ink-3);
+  line-height: 1.55;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: left;
 }
 
 .hero__affiliation {
@@ -501,6 +526,7 @@ code {
   color: var(--rule-hi);
   font-size: 4rem;
 }
+
 
 /* ── 6. Section Wrapper & Headers ───────────────────────── */
 .section-header { margin-bottom: 56px; }
@@ -1317,7 +1343,8 @@ code {
     gap: 24px;
   }
   .hero__avatar { width: 140px; flex-shrink: 0; aspect-ratio: 3 / 4; }
-  .hero__card-info { padding-top: 0; }
+  .hero__card-info {   text-align: left;
+  align-items: flex-start;}
   .hero__bio { max-width: 100%; }
 
   .cols-2 { grid-template-columns: 1fr; gap: 40px; }
@@ -1548,7 +1575,7 @@ body.dark-page .hero__title {
   line-height: 1.55;
   margin-bottom: 0;
   font-weight: 400;
-  text-align: center;
+  text-align: left;
 }
 
 body.dark-page .hero__affiliation { display: none; }
@@ -1574,10 +1601,10 @@ body.dark-page .hero__meta        { display: none; }
 .profile-link {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   font-size: 0.82rem;
   color: var(--ink-3);
-  padding: 5px 0;
+  padding: 3px 0;
   text-decoration: none;
   transition: color var(--dur) var(--ease);
 }
@@ -1592,7 +1619,7 @@ body.dark-page .hero__meta        { display: none; }
 
 /* Right content */
 .dark-hero-name {
-  font-size: clamp(1.7rem, 2.8vw, 2.3rem);
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   font-weight: 700;
   color: var(--ink);
   margin-bottom: 28px;
@@ -1606,7 +1633,7 @@ body.dark-page .hero__meta        { display: none; }
   line-height: 1.85;
   margin-bottom: 20px;
   max-width: 680px;
-  text-align: left;
+  text-align: justify;
 }
 
 .dark-bio strong { color: var(--ink); font-weight: 600; }
