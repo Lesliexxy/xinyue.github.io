@@ -309,13 +309,41 @@ code {
 
 .hero__inner {
   display: grid;
-  grid-template-columns: 1fr 240px;
+  grid-template-columns: 260px 1fr;
   align-items: start;
-  gap: 64px;
+  gap: 56px;
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 80px var(--pad-x);
 }
+
+.hero__profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__card-info {
+  padding-top: 20px;
+}
+
+.hero__location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: var(--ink-3);
+  margin-bottom: 6px;
+}
+
+.hero__email-link {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--ink-3);
+  text-decoration: none;
+  margin-bottom: 18px;
+  transition: color var(--dur) var(--ease);
+}
+.hero__email-link:hover { color: var(--accent); }
 
 .hero__meta {
   font-size: 0.75rem;
@@ -327,13 +355,13 @@ code {
 }
 
 .hero__name {
-  font-size: clamp(2rem, 4.5vw, 3.2rem);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
   color: var(--ink);
-  margin-bottom: 24px;
-  white-space: nowrap;
+  margin-bottom: 6px;
+  white-space: normal;
 }
 
 /* Thin rule below name */
@@ -353,9 +381,10 @@ code {
 }
 
 .hero__affiliation {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   color: var(--ink-3);
-  margin-bottom: 32px;
+  line-height: 1.6;
+  margin-bottom: 12px;
 }
 .hero__affiliation a { color: var(--ink-3); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--rule-hi); }
 .hero__affiliation a:hover { color: var(--accent); }
@@ -403,16 +432,13 @@ code {
 }
 
 .hero__avatar {
-  width: 240px;
-  height: 280px;
+  width: 100%;
+  aspect-ratio: 3 / 4;
   background: var(--bg-subtle);
   border: 1px solid var(--rule);
   border-radius: var(--r-lg);
   overflow: hidden;
-  flex-shrink: 0;
-  align-self: start;
   position: relative;
-  margin-top: 8px;
 }
 .hero__avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
 .hero__avatar .placeholder-icon {
@@ -1231,15 +1257,24 @@ code {
 
   .hero__inner {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
     padding: 72px var(--pad-x);
   }
-  .hero__inner > *:first-child { order: 2; }
-  .hero__avatar { order: 1; width: 160px; height: 190px; align-self: start; }
+  .hero__profile {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .hero__avatar { width: 140px; flex-shrink: 0; aspect-ratio: 3 / 4; }
+  .hero__card-info { padding-top: 0; }
   .hero__bio { max-width: 100%; }
-  .hero__name { white-space: normal; }
 
   .cols-2 { grid-template-columns: 1fr; gap: 40px; }
+}
+
+@media (max-width: 560px) {
+  .hero__profile { flex-direction: column; }
+  .hero__avatar { width: 100%; max-width: 200px; }
 }
 
 @media (max-width: 920px) {
@@ -1264,8 +1299,6 @@ code {
 }
 
 @media (max-width: 480px) {
-  h1 { font-size: 2.4rem; }
-  .hero__name { font-size: 2.8rem; }
   .hero__actions { flex-direction: column; align-items: flex-start; }
 }
 
