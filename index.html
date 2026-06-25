@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script>(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}());</script>
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dark-page">
@@ -31,6 +33,10 @@
       <li><a href="life.html">Life</a></li>
       <li><a href="assets/cv.pdf" class="nav__cta" target="_blank">CV ↗</a></li>
     </ul>
+    <button class="nav__theme-toggle" aria-label="Toggle dark mode">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+
 
     <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -88,7 +94,7 @@
             Email
           </a>
           <!-- Google Scholar -->
-          <a href="https://scholar.google.com/citations?user=YOUR-ID" target="_blank" rel="noopener" class="profile-link">
+          <a href="https://scholar.google.com/citations?user=zJpzOSEAAAAJ" target="_blank" rel="noopener" class="profile-link">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z"/></svg>
             Google Scholar
           </a>

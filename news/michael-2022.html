@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,8 @@
   <meta name="description" content="Awarded the Louis S. and Sara S. Michael Endowed Graduate Fellowship in Engineering ($3,000) by The Pennsylvania State University, June 2022.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script>(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}());</script>
+
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -23,6 +25,10 @@
       <li><a href="../index.html#skills">Skills</a></li>
       <li><a href="../assets/cv.pdf" class="nav__cta" target="_blank">CV ↗</a></li>
     </ul>
+    <button class="nav__theme-toggle" aria-label="Toggle dark mode">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+
     <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
