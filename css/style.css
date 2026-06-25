@@ -124,9 +124,9 @@ html {
 body {
   background: var(--bg);
   color: var(--ink);
-  font-family: var(--sans);
+  font-family: var(--sans-serif);
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -139,7 +139,7 @@ a:hover { color: var(--accent-2); }
 
 /* ── 2. Base Typography ─────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--serif);
+  font-family: var(--sans-serif);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.01em;
@@ -154,7 +154,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 p { color: var(--ink-2); text-align: justify; }
 
 code {
-  font-family: var(--mono);
+  font-family: var(--sans-serif);
   font-size: 0.85em;
   background: var(--bg-subtle);
   border: 1px solid var(--rule);
@@ -166,37 +166,13 @@ code {
 /* Label overline — small uppercase with tracking */
 .overline {
   display: block;
-  font-family: var(--sans);
+  font-family: var(--sans-serif);
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--ink-3);
+  letter-spacing: 0.14em;
+  color: var(--accent);
 }
-
-/* Page-hero title (Publications, News, Projects standalone pages) */
-.page-hero-title {
-  font-family: var(--serif);
-  font-size: clamp(2.2rem, 5vw, 3.2rem);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  margin: 10px 0 16px;
-  color: var(--ink);
-}
-
-.page-hero-subtitle {
-  font-size: 0.95rem;
-  color: var(--ink-2);
-  max-width: 520px;
-  line-height: 1.75;
-}
-
-/* Prose block — consistent paragraph rhythm */
-.prose p {
-  line-height: 1.85;
-  margin-bottom: 20px;
-}
-.prose p:last-child { margin-bottom: 0; }
 
 /* ── 3. Layout & Grid ───────────────────────────────────── */
 .container {
@@ -258,7 +234,7 @@ code {
 }
 
 .nav__logo {
-  font-family: var(--serif);
+  font-family: var(--sans-serif);
   font-size: 1.25rem;
   font-weight: 600;
   color: #ffffff !important;
@@ -356,7 +332,7 @@ code {
 .nav__mobile a {
   display: block;
   padding: 14px 0;
-  font-family: var(--serif);
+  font-family: var(--sans-serif);
   font-size: 1.3rem;
   font-weight: 400;
   color: rgba(255,255,255,0.78) !important;
@@ -399,6 +375,7 @@ code {
 
 .hero__card-info {
   padding-top: 20px;
+  color: var(--rule);
 }
 
 .hero__location {
@@ -406,14 +383,14 @@ code {
   align-items: center;
   gap: 5px;
   font-size: 0.8rem;
-  color: var(--ink-3);
+  color: var(--rule);
   margin-bottom: 6px;
 }
 
 .hero__email-link {
   display: block;
   font-size: 0.8rem;
-  color: var(--ink-3);
+  color: var(--rule);
   text-decoration: none;
   margin-bottom: 18px;
   transition: color var(--dur) var(--ease);
@@ -609,7 +586,7 @@ code {
 
 .project-card__body { padding: 28px 28px 32px; flex: 1; display: flex; flex-direction: column; }
 .project-card__tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
-.project-card__title { font-size: 1rem; font-weight: 700; font-family: var(--sans); margin-bottom: 10px; color: var(--ink); line-height: 1.4; }
+.project-card__title { font-size: 1rem; font-weight: 700; font-family: var(--sans-serif); margin-bottom: 10px; color: var(--ink); line-height: 1.4; }
 .project-card__desc { font-size: 0.875rem; color: var(--ink-2); line-height: 1.65; flex: 1; margin-bottom: 24px; }
 .project-card__links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; }
 
@@ -633,7 +610,7 @@ code {
 }
 
 .pub-item__title {
-  font-family: var(--serif);
+  font-family: var(--sans-serif);
   font-size: 1.15rem;
   font-weight: 600;
   color: var(--ink);
@@ -726,7 +703,7 @@ code {
 }
 
 .timeline-item__degree {
-  font-family: var(--serif);
+  font-family: var(--sans-serif);
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--ink);
@@ -788,7 +765,7 @@ code {
 
 .news-item__date {
   font-size: 0.75rem;
-  font-family: var(--mono);
+  font-family: var(--sans-serif);
   color: var(--ink-3);
   white-space: nowrap;
 }
@@ -809,7 +786,7 @@ code {
   margin-top: 20px;
   background: none;
   border: none;
-  font-family: var(--sans);
+  font-family: var(--sans-serif);
   font-size: 0.78rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -988,7 +965,7 @@ code {
 }
 
 .footer__brand {
-  font-family: var(--serif);
+  font-family: var(--sans-serif);
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--ink);
@@ -1116,7 +1093,7 @@ code {
 .finding-item:nth-child(even) { background: var(--bg-subtle); }
 
 .finding-item__num {
-  font-family: var(--mono);
+  font-family: var(--sans-serif);
   font-size: 0.75rem;
   color: var(--accent);
   font-weight: 600;
@@ -1136,7 +1113,7 @@ code {
   border: 1px solid var(--rule);
   border-radius: var(--r-lg);
   padding: 24px 28px;
-  font-family: var(--mono);
+  font-family: var(--sans-serif);
   font-size: 0.8rem;
   color: var(--ink-2);
   line-height: 1.7;
@@ -1280,7 +1257,7 @@ code {
 
 /* Title is a plain <a> — inherits hover colour */
 .project-row__title {
-  font-family: var(--sans);
+  font-family: var(--sans-serif);
   font-size: 1rem;
   font-weight: 700;
   color: var(--ink);
@@ -1564,7 +1541,7 @@ body.dark-page .hero__name {
   font-weight: 700;
   color: var(--ink);
   margin-bottom: 8px;
-  font-family: var(--sans);
+  font-family: var(--sans-serif);
   letter-spacing: 0;
   text-align: center;
 }
@@ -1623,7 +1600,7 @@ body.dark-page .hero__meta        { display: none; }
   font-weight: 700;
   color: var(--ink);
   margin-bottom: 28px;
-  font-family: var(--sans);
+  font-family: var(--sans-serif);
   letter-spacing: -0.01em;
 }
 
@@ -1633,7 +1610,7 @@ body.dark-page .hero__meta        { display: none; }
   line-height: 1.85;
   margin-bottom: 20px;
   max-width: 680px;
-  text-align: justify;
+  text-align: justify ;
 }
 
 .dark-bio strong { color: var(--ink); font-weight: 600; }
