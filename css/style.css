@@ -1517,7 +1517,8 @@ body.dark-page .hero {
   border-bottom: none;
   min-height: auto;
   padding: calc(var(--nav-h) + 36px) 0 40px;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 /* Circular avatar */
@@ -1617,8 +1618,10 @@ body.dark-page .hero__meta        { display: none; }
 }
 
 .hero__interests {
-  margin-top: 16px;
-  padding-top: 14px;
+  max-width: var(--max-w);
+  width: 100%;
+  margin: 20px auto 0;
+  padding: 18px var(--pad-x) 0;
   border-top: 1px solid var(--rule);
 }
 
