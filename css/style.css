@@ -318,6 +318,7 @@ code {
 }
 
 .hero__profile {
+  max-width: 200px;
   display: flex;
   flex-direction: column;
 }
